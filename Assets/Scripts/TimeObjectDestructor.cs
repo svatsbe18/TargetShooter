@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class TimeObjectDestructor : MonoBehaviour
 {
-    float timeToDestroy = 10f;
+    float timeToDestroy = 7f;
 
     // Start is called before the first frame update
     void Start()

@@ -8,16 +8,23 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject player;
 
+    public GameObject ground;
+    public float groundMovementSpeed = 4f;
+    [SerializeField] public bool groundMoving = true;
+    //[SerializeField] float groundStopTime = 3f;
+
     [SerializeField] GameObject[] characters;
     [SerializeField] Transform[] spawnPositions;
 
-    [SerializeField] float minSpawnTime = 2f;
-    [SerializeField] float maxSpawnTime = 5f;
+    [SerializeField] float minSpawnTime = 7f;
+    [SerializeField] float maxSpawnTime = 15f;
+
+    //float startTime = 7f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -26,8 +33,24 @@ public class GameManager : MonoBehaviour
         if(Time.time>=Random.Range(minSpawnTime,maxSpawnTime))
         {
             SpawnCharacters();
+            //startTime += Time.time;
             minSpawnTime += Time.time;
             maxSpawnTime += Time.time;
+        }
+        /*if(Time.time>=)//groundStopTime)
+        {
+            groundMoving = true;
+            //groundStopTime += Time.time;
+        }*/
+        
+        if(groundMoving)
+        {
+            ground.transform.Translate(new Vector3(0, 0, -groundMovementSpeed) * Time.deltaTime);
+        }
+
+        if(ground.transform.position.z<=player.transform.position.z)
+        {
+            ground.transform.position = new Vector3(0, 0, 0);
         }
     }
 
@@ -40,6 +63,8 @@ public class GameManager : MonoBehaviour
             character.transform.rotation = position.rotation;
             character.AddComponent<TimeObjectDestructor>();
             character.AddComponent<Target>();
+            //character.transform.parent = ground.transform;
         }
+        //groundMoving = false;
     }
 }
