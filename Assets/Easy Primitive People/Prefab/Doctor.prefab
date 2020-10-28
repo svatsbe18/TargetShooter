@@ -613,6 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: -10
+  notDeadScore: 5
 --- !u!1 &3578275715817459665
 GameObject:
   m_ObjectHideFlags: 0

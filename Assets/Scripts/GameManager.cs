@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject ground;
     public float groundMovementSpeed = 4f;
-    [SerializeField] public bool groundMoving = true;
+    [HideInInspector] public bool groundMoving = true;
 
     [SerializeField] GameObject[] characters;
     [SerializeField] Transform[] spawnPositions;
 
-    [SerializeField] float minSpawnTime = 7f;
-    [SerializeField] float maxSpawnTime = 15f;
+    [SerializeField] float minSpawnTime = 5f;
+    [SerializeField] float maxSpawnTime = 10f;
+    float nextMinSpawnTime;
+    float nextMaxSpawnTime;
 
     UIManager uIManager;
 
@@ -25,18 +27,21 @@ public class GameManager : MonoBehaviour
     {
         gm = GetComponent<GameManager>();
         uIManager = FindObjectOfType<UIManager>();
+
+        nextMinSpawnTime = minSpawnTime;
+        nextMaxSpawnTime = maxSpawnTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time>=Random.Range(minSpawnTime,maxSpawnTime))
+        if(Time.time>=Random.Range(nextMinSpawnTime,nextMaxSpawnTime))
         {
             SpawnCharacters();
-            minSpawnTime--;
-            maxSpawnTime--;
-            minSpawnTime += Time.time;
-            maxSpawnTime += Time.time;
+            nextMinSpawnTime = Time.time + minSpawnTime;
+            nextMaxSpawnTime = Time.time + maxSpawnTime;
+            //minSpawnTime += Time.time;
+            //maxSpawnTime += Time.time;
         }
 
         if(groundMoving)
