@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     float cameraXRotation = 0;
     float playerYRotaion = 0;
 
+    [SerializeField] AudioSource gunAudio;
+
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Fire();
+            gunAudio.Play();
         }
         MouseRotation();
     }

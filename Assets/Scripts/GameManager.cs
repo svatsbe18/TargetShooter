@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
+
         gm = GetComponent<GameManager>();
         uIManager = FindObjectOfType<UIManager>();
 
@@ -70,5 +72,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
     }
 }

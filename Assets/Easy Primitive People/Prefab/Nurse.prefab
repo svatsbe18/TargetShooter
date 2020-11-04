@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6388161181340645955}
   - component: {fileID: 4112616624057335928}
   - component: {fileID: 5547785722723854278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mic_inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 8955510091181375430}
   - component: {fileID: 7906199518825545522}
   - component: {fileID: 7846614270031884495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube2_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1389776333713723205}
   - component: {fileID: 3742532121949579218}
   - component: {fileID: 111303595699413780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube5_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 6977945936343677774}
   - component: {fileID: 1269806488322621354}
   - component: {fileID: 2905152382960274876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 2472307854426153402}
   - component: {fileID: 6358798019269143545}
   - component: {fileID: 7628969457464086717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 1402629065424749739}
   - component: {fileID: 133160500960607632}
   - component: {fileID: 1125425038848077784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StrapLeftBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 153113464759344507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 4256066754618335865}
   - component: {fileID: 6393136504937234695}
   - component: {fileID: 6216009664934981760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StrapRightTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 5584121887839378991}
   - component: {fileID: 3300148463889032128}
   - component: {fileID: 4262646470590660620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 4904869141981266864}
   - component: {fileID: 1152733337298253460}
   - component: {fileID: 3058815814811423291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StrapLeftTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 3123500947797778421}
   - component: {fileID: 4993101372703398423}
   - component: {fileID: 254545808973302051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MouthCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 7882874860329171447}
   - component: {fileID: 4600623396005384294}
   - component: {fileID: 4729872821328523975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StrapRightBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 2170962899189291127}
   - component: {fileID: 7971809805846535895}
   - component: {fileID: 3906809591370013006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube1_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,7 +995,11 @@ GameObject:
   m_Component:
   - component: {fileID: 177407082141715887}
   - component: {fileID: 8788257892229762412}
-  m_Layer: 0
+  - component: {fileID: -3970833560735965229}
+  - component: {fileID: -3882604990871891931}
+  - component: {fileID: -4895477561710348724}
+  - component: {fileID: 5222357896876453518}
+  m_Layer: 8
   m_Name: Nurse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,6 +1034,152 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: -10
+  notDeadScore: 5
+--- !u!136 &-3970833560735965229
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &-3882604990871891931
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af141dfbe0c57c64b8392face0b3bff7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &-4895477561710348724
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!82 &5222357896876453518
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618188073631541129}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e11a5a019377fbd4c81caa0adcb4c236, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2629889911763255196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1191,7 @@ GameObject:
   - component: {fileID: 7032451780476376317}
   - component: {fileID: 6813579929102221898}
   - component: {fileID: 6424386973087795790}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1270,7 @@ GameObject:
   - component: {fileID: 2597329101441156200}
   - component: {fileID: 7959599259342743786}
   - component: {fileID: 4570400420838722934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube2_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1349,7 @@ GameObject:
   - component: {fileID: 7547972029351810458}
   - component: {fileID: 5308865135557790819}
   - component: {fileID: 255971936189957488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube1_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4198649933001637154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Specifics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1462,7 @@ GameObject:
   - component: {fileID: 4491012406187714384}
   - component: {fileID: 9015258955854644968}
   - component: {fileID: 4731252440296664068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1541,7 @@ GameObject:
   - component: {fileID: 7426342997306014522}
   - component: {fileID: 6825676448908421897}
   - component: {fileID: 7072530220485472278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube3_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526534755035777572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1505,7 +1655,7 @@ GameObject:
   - component: {fileID: 3357574587228598222}
   - component: {fileID: 8225787694991544684}
   - component: {fileID: 9164958800698041487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VerticalStripe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1734,7 @@ GameObject:
   - component: {fileID: 4277481032194577833}
   - component: {fileID: 6226725486484273267}
   - component: {fileID: 77739718167196362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mic_outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,7 +1813,7 @@ GameObject:
   - component: {fileID: 4695015970602213768}
   - component: {fileID: 115903326784450872}
   - component: {fileID: 3210364543207194162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube3_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1743,7 +1893,7 @@ GameObject:
   - component: {fileID: 2744233246823178154}
   - component: {fileID: 3552670066926651371}
   - component: {fileID: 5910943902064425676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1986,7 @@ GameObject:
   - component: {fileID: 5325878776558621709}
   - component: {fileID: 3609102509583034574}
   - component: {fileID: 5968664882352501437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1916,7 +2066,7 @@ GameObject:
   - component: {fileID: 392527760865035222}
   - component: {fileID: 383845021080686809}
   - component: {fileID: 4899343176662946995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HorizontalStripe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +2145,7 @@ GameObject:
   - component: {fileID: 4515771744037316986}
   - component: {fileID: 6553674125061739164}
   - component: {fileID: 3622836577906017639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tube4_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924947504531569224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stethoscope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
